@@ -21,9 +21,13 @@ _User is prompted for information about their event._
 * _Example Output: How many attendees are you expecting at your event?_
 * _Example Input: 50_
 
+_When the user adds invalid inputs, the application will notify them and ask them to try again. Will you need bar service for you event? Please enter 'yes' or 'no'._
+* _Example Input: "Maybe"_
+* _Example Output: "Sorry, we didn't recognize that option."_
+
 _Based on answers to questions about their event, the program will return a price._
 * _Example Input: Attendees = 50, Full bar = yes, Food = yes._
-* _Example Output: "The estimated cost for you event is: $1000._
+* _Example Output: "The estimated cost for you event is: $1000."_
 
 ## Known Bugs
 _There are currently no known bugs for this project. If you discover any issues, you can reach me via the contact details below._
