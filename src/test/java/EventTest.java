@@ -33,4 +33,16 @@ public class EventTest {
     assertEquals(false, testEvent.getBand());
   }
 
+  @Test
+  public void newEvent_getsCostPerAttendee_5() {
+    Event testEvent = new Event(50, "snacks");
+    assertEquals(5, testEvent.getCostPerAttendee());
+  }
+
+  @Test
+  public void newEvent_setsCostPerAttendee_7() {
+    Event testEvent = new Event(101, "none");
+    assertEquals(7, testEvent.setCostPerAttendee());
+  }
+
 }
