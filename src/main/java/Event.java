@@ -4,7 +4,7 @@ public class Event {
   private boolean mBar;
   private boolean mBand;
   private int mCostPerAttendee;
-  private int mTotalPrice;
+  private int mTotalCost;
 
   public Event(int attendees, String food) {
     mAttendees = attendees;
@@ -12,7 +12,7 @@ public class Event {
     mBar = false;
     mBand = false;
     mCostPerAttendee = 0;
-    mTotalPrice = 0;
+    mTotalCost = 0;
   }
 
   public int setCostPerAttendee() {
@@ -33,12 +33,26 @@ public class Event {
     if (mBar) {
       mCostPerAttendee += 3;
     }
+
     return mCostPerAttendee;
+  }
+
+  public int setTotalCost() {
+    mTotalCost = mCostPerAttendee * mAttendees;
+    // if (mBand) {
+    //   mTotalCost += 400;
+    // }
+    return mTotalCost;
   }
 
   public boolean setBarTrue() {
     mBar = true;
     return mBar;
+  }
+
+  public boolean setBandTrue() {
+    mBand = true;
+    return mBand;
   }
 
   public int getAttendees() {

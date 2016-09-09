@@ -47,7 +47,7 @@ public class EventTest {
 
   @Test
   public void newEvent_setsBarTrue_true() {
-    Event testEvent = new Event(50, "full dinner menu");
+    Event testEvent = new Event(50, "none");
     assertEquals(true, testEvent.setBarTrue());
   }
 
@@ -57,5 +57,25 @@ public class EventTest {
     testEvent.setBarTrue();
     assertEquals(8, testEvent.setCostPerAttendee());
   }
+
+  @Test
+  public void newEvent_setsBandTrue_true() {
+    Event testEvent = new Event(50, "none");
+    assertEquals(true, testEvent.setBandTrue());
+  }
+
+  @Test
+  public void newEvent_setsTotalCost_250() {
+    Event testEvent = new Event(50, "none");
+    testEvent.setCostPerAttendee();
+    assertEquals(250, testEvent.setTotalCost());
+  }
+
+  // @Test
+  // public void newEvent_setsTotalCost_250() {
+  //   Event testEvent = new Event(50, "none");
+  //   testEvent.setCostPerAttendee();
+  //   assertEquals(250, testEvent.setTotalCost());
+  // }
 
 }
