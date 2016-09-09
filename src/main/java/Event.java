@@ -11,19 +11,34 @@ public class Event {
     mFood = food;
     mBar = false;
     mBand = false;
-    mCostPerAttendee = 5;
+    mCostPerAttendee = 0;
     mTotalPrice = 0;
   }
 
   public int setCostPerAttendee() {
-    if (mAttendees <= 100 && mAttendees > 0) {
+    if (mAttendees > 0 && mAttendees <= 100) {
       mCostPerAttendee = 5;
     } else if (mAttendees > 100) {
       mCostPerAttendee = 7;
     } else {
       mCostPerAttendee = 0;
     }
+
+    if (mFood.equalsIgnoreCase("full dinner menu")) {
+      mCostPerAttendee += 10;
+    } else if (mFood.equalsIgnoreCase("snacks")) {
+      mCostPerAttendee += 5;
+    }
+
+    if (mBar) {
+      mCostPerAttendee += 3;
+    }
     return mCostPerAttendee;
+  }
+
+  public boolean setBarTrue() {
+    mBar = true;
+    return mBar;
   }
 
   public int getAttendees() {
@@ -40,10 +55,6 @@ public class Event {
 
   public boolean getBand() {
     return mBand;
-  }
-
-  public int getCostPerAttendee() {
-    return mCostPerAttendee;
   }
 
 }
