@@ -39,9 +39,9 @@ public class Event {
 
   public int setTotalCost() {
     mTotalCost = mCostPerAttendee * mAttendees;
-    // if (mBand) {
-    //   mTotalCost += 400;
-    // }
+    if (mBand) {
+      mTotalCost += 400;
+    }
     return mTotalCost;
   }
 

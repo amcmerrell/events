@@ -71,11 +71,12 @@ public class EventTest {
     assertEquals(250, testEvent.setTotalCost());
   }
 
-  // @Test
-  // public void newEvent_setsTotalCost_250() {
-  //   Event testEvent = new Event(50, "none");
-  //   testEvent.setCostPerAttendee();
-  //   assertEquals(250, testEvent.setTotalCost());
-  // }
+  @Test
+  public void newEvent_setsTotalCostbyBandValue_650() {
+    Event testEvent = new Event(50, "none");
+    testEvent.setCostPerAttendee();
+    testEvent.setBandTrue();
+    assertEquals(650, testEvent.setTotalCost());
+  }
 
 }
